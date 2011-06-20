@@ -9,12 +9,7 @@
 
 	if ($mode == 'update') {
 		fn_update_block($_REQUEST['block'], $_REQUEST['block']['location'], $_REQUEST['redirect_location']);
-		$suffix .= "&selected_section=$_REQUEST[redirect_location]";
-	}
-
-	if ($mode == 'update_location') {
-		fn_update_location($_REQUEST['block']);
-		$suffix .= "&selected_section=" . $_REQUEST['block']['location'];
+f	$suffix .= "&selected_section=" . $_REQUEST['block']['location'];
 	}
 
 	if ($mode == 'add_items') {
