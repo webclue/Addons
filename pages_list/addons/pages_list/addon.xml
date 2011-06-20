@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<addon>
+	<id>pages_list</id>
+	<name>Pages list</name>
+	<priority>500</priority>
+	<position>110</position>
+	<status>active</status>
+	<dependencies></dependencies>
+	<translations>
+		<item for="name" lang="RU">Список страниц</item>
+	</translations>
+	<opt_settings>
+		<section name="general">
+			<item id="parent_page_id">
+				<name>Parent page id</name>
+				<type>input</type>
+				<default_value>0</default_value>
+				<translations>
+					<item lang="RU">Id родительской страницы</item>
+				</translations>
+			</item>
+		</section>
+	</opt_settings>
+        <opt_queries>        
+            <item>ALTER TABLE `?:page_descriptions` ADD `short_description` text NOT NULL</item> 
+            <item for="uninstall">ALTER TABLE `?:page_descriptions` DROP `short_description`</item> 
+        </opt_queries>  
+  <opt_language_variables>
+	  <item lang="EN" id="pages_list">Pages list</item> 
+	  <item lang="RU" id="pages_list">Списко страниц</item> 
+  </opt_language_variables>
+</addon>
