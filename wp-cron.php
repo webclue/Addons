@@ -11,6 +11,8 @@
 
 ignore_user_abort(true);
 
+//empty line
+
 if ( !empty($_POST) || defined('DOING_AJAX') || defined('DOING_CRON') )
 	die();
 
